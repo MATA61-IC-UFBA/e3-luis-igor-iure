@@ -9,13 +9,18 @@
 
 %}
 
-%%
-
-"if" 				{ return IF; } // incluir IF em token.h
-
-. 				{ return ERROR; }
-
+letter [A-Za-z]
 
 %%
-
+"//".*                               { } // Ignora os comentários
+[ \n\t\r]+                              { }  // Ignorar espaços em branco e novas linhas
+array|boolean|char|else|false|for|function|if|integer|print|return|string|true|void|while { return KEY; }
+{letter}({letter}|[0-9]|(\_))*          { return ID; }
+[\+\-\*\/%!\<\>\=\:\;\,\(\)\{\}\[\]\\]      { return SYM; }
+(<=|>=|==|!=|&&|\|\|)                   { return SYMC; }
+[0-9]+                                  { return NUM; }
+\'(.|\\'|\\0|\\n|\ )\'     { return CHAR; }
+\"[^\"\n]*\"                              { return STR; }
+.                                       { return ERROR; }
+%%
 
