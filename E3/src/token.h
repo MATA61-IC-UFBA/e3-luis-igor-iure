@@ -20,15 +20,20 @@ typedef enum {
         LBRACKET = 91,
         RBRACKET = 93,
         TYPE = 266,
-        KEY = 264,
-        BOOL = 266,
         PRINT = 267,
 
         IF = 265,
         ELSE = 261,
-        FOR = 262,
 
-
+        BOOL = 259,
+        FALSE = 262,
+        TRUE = 270,
+        FOR = 263,
+        FUNC = 264,
+        WHILE = 272,
+        VOID = 271,
+        STRING = 269,
+        RETURN = 268,
 
         AND = 277,
         EQ = 61,
@@ -43,3 +48,4 @@ typedef enum {
 	STR,
 	ERROR
 } token_t; 
+

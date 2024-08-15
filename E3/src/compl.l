@@ -14,12 +14,17 @@ letter [A-Za-z]
 %%
 "//".*                               { } // Ignora os comentários
 [ \n\t\r]+                              { }  // Ignorar espaços em branco e novas linhas
-array|boolean|char|string|void|integer                        { return TYPE; }
-if                         { return IF; }
 else                       { return ELSE; }
-for|function|return|while { return KEY; }
+boolean    { return BOOL; }
+true   { return TRUE; }
+false  { return FALSE; }
+array|char|string|void|integer                        { return TYPE; }
+if                         { return IF; }
+for     { return FOR; }
+function { return FUNC; }
+while { return WHILE; }
+return { return RETURN; }
 print                                   { return PRINT; }
-false|true                                  { return BOOL; }
 {letter}({letter}|[0-9]|(\_))*              { return ID; }
 "\+"                                           { return ADD; }
 -                                           { return SUB; }
@@ -50,3 +55,18 @@ false|true                                  { return BOOL; }
 .                                       { return ERROR; }
 %%
 
+
+// (1,259,"boolean")
+// (2,261,"else")
+// (3,262,"false")
+// (4,264,"function")
+// (5,265,"if")
+// (6,266,"integer")
+// (7,267,"print")
+// (8,268,"return")
+// (9,269,"string")
+// (10,270,"true")
+// (11,271,"void")
+// (12,272,"while")
+// (13,263,"for")
+// (14,260,"char")
