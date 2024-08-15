@@ -7,36 +7,39 @@ typedef enum {
         TIMES = 42,
         DIV = 47,
         MOD = 37,
+        NOT = 33,
+        LT = 60,
+        GT = 62,
+        TWOPOINTS = 58,
+        SEMICOLON = 59,
+        COMMA = 44,
+        LPAREN = 40,
+        RPAREN = 41,
+        LBRACE = 123,
+        RBRACE = 125,
+        LBRACKET = 91,
+        RBRACKET = 93,
+        TYPE = 777,
+        KEY = 2659,
+        BOOL = 266,
+        PRINT = 267,
+
+        IF = 265,
+        ELSE = 261,
+        FOR = 262,
+
+
 
         AND = 277,
-        EQ = 275,
+        EQ = 61,
+        NEQ = 62,
         LEQ = 273,
         GEQ = 274,
-        ID = 256, 
+        ID = 256,
 	NUM, 
-        KEY,
         SYM,  
         SYMC, 
         CHAR,
 	STR,
 	ERROR
 } token_t; 
-
-/*
-(1,42,"*")
-(1,47,"/")
-(1,37,"%")
-(2,33,"!")
-(2,60,"<")
-(2,62,">")
-(2,61,"=")
-(3,58,":")
-(3,59,";")
-(3,44,",")
-(4,40,"(")
-(4,41,")")
-(4,123,"{")
-(4,125,"}")
-(5,91,"[")
-(5,93,"]")
-*/
