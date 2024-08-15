@@ -34,6 +34,7 @@ false|true                                  { return BOOL; }
 ==|=                                          { return EQ; }
 !=                                          { return NEQ; }
 \(                                          { return LPAREN; }
+:                                           { return COLON; }
 \)                                          { return RPAREN; }
 \{                                          { return LBRACE; }
 \}                                          { return RBRACE; }
